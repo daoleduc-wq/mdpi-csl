@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xcite/style" xmlns:csl="http://purl.org/net/xcite/csl" version="1.0" class="in-text">
+<style xmlns="http://purl.org/net/xbiblio/csl"
+       version="1.0"
+       class="numeric">
 
   <info>
-    <title>MDPI Custom Style</title>
-    <id>http://www.mdpi.com/csl/custom-mdpi</id>
-    <author>
-      <name>Custom Generated</name>
-    </author>
+    <title>MDPI Strict Numeric Style</title>
+    <id>https://www.mdpi.com/citation-style/mdpi-numeric</id>
+    <link href="https://www.mdpi.com/authors/references" rel="documentation"/>
     <category citation-format="numeric"/>
     <category field="science"/>
-    <updated>2026-01-28T00:00:00+00:00</updated>
+    <updated>2026-01-29T00:00:00+00:00</updated>
   </info>
 
+  <!-- In-text citations: [1], [2–4] -->
   <citation collapse="citation-number">
     <sort>
       <key variable="citation-number"/>
@@ -21,36 +22,35 @@
     </layout>
   </citation>
 
-  <bibliography et-al-min="7" et-al-use-first="6" second-field-align="flush" entry-spacing="0" line-spacing="1">
+  <!-- Reference list -->
+  <bibliography et-al-min="7"
+                et-al-use-first="6"
+                second-field-align="flush">
     <layout suffix=".">
       <text variable="citation-number" prefix="[" suffix="] "/>
 
       <names variable="author">
-        <name initialize-with="." delimiter=", "/>
-        <et-al font-style="normal"/>
+        <name name-as-sort-order="all"
+              initialize-with="."
+              delimiter=", "/>
+        <et-al/>
       </names>
-      <text value=", "/>
+      <text value=". "/>
+
+      <text variable="title" suffix=". "/>
+
+      <text variable="container-title" font-style="italic" suffix=" "/>
 
       <date variable="issued">
         <date-part name="year"/>
       </date>
       <text value=", "/>
 
-      <text variable="title" suffix=". "/>
+      <text variable="volume" suffix=", "/>
 
-      <text variable="container-title" font-style="italic" suffix=", "/>
+      <text variable="page" suffix=". "/>
 
-      <group delimiter=", ">
-        <text variable="volume"/>
-        <text variable="issue" prefix="(" suffix=")"/>
-      </group>
-
-      <text variable="page" prefix=", "/>
-
-      <group prefix=". https://doi.org/">
-        <text variable="DOI"/>
-      </group>
-
+      <text variable="DOI" prefix="https://doi.org/"/>
     </layout>
   </bibliography>
 
